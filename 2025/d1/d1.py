@@ -1,4 +1,4 @@
-with open('input.txt') as f:
+with open('input_snaz.txt') as f:
     lines = [l.strip() for l in f.readlines()]
 
 current, count1, count2 = 50, 0, 0
