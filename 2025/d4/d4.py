@@ -6,11 +6,8 @@ def adjacencies(x, y, grid):
     total = 0
     for i in range(x - 1, x + 2):
         for j in range(y - 1, y + 2):
-            try:
-                if grid[i][j] == '@' and i >= 0 and j >= 0:
-                    total += 1
-            except Exception as e:
-                continue
+            if grid[i][j] == '@' and i >= 0 and j >= 0:
+                total += 1
 
     # print(f'{x} {y} {total}')
     return int(total <= 4)
