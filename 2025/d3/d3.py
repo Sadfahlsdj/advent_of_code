@@ -15,11 +15,9 @@ for i, n in enumerate(numbers_to_select):  # 2 = p1, 12 = p2
                 m = max(line_current[:-1 * offset])
             values.append(m)
             line_current = line_current[line_current.index(m) + 1:]  # continue from after current val
-            print(f'{line_current}: {values}')
 
         row_value = sum([10 ** (len(values) - 1 - i_temp) * int(v) for i_temp, v in enumerate(values)])
         totals[i] += row_value
 
 print(totals)
 
-# 3121910778619
