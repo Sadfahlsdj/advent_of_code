@@ -3,16 +3,6 @@ with open('input.txt') as f:
     ranges = [[int(n) for n in l.split('-')] for l in lines[:lines.index('')]]
     numbers = [int(n) for n in lines[lines.index('') + 1:]]
 
-# p1
-valid_p1 = set()
-for n in numbers:
-    for low, high in ranges:
-        if n >= low and n <= high:
-            valid_p1.add(n)
-
-print(len(valid_p1))
-
-# p2
 changes_made = True
 while changes_made:
     changes_made = False
@@ -53,7 +43,3 @@ while changes_made:
 # print(ranges)
 total_p2 = sum([(high - low + 1) for low, high in ranges])
 print(total_p2)
-
-# 349857423070633 too high
-# 347468726696961
-
